@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface ServicesDropdownProps {
   onClose: () => void;
@@ -9,12 +9,12 @@ interface ServicesDropdownProps {
 
 export default function ServicesDropdown({ onClose }: ServicesDropdownProps) {
   const items = [
-    { name: 'Contact', href: '/services' },
-    { name: 'Catalogues', href: '/services' },
-    { name: 'Spare Parts', href: '/services' },
-    { name: 'Certificates', href: '/services' },
-    { name: 'Download Centre', href: '/services' },
-    { name: 'BIM', href: '/services' },
+    { name: "Contact", href: "/services/contact" },
+    { name: "Catalogues", href: "/services/catalogues" },
+    { name: "Spare Parts", href: "/services/spare-parts" },
+    { name: "Certificates", href: "/services/certificates" },
+    { name: "Download Centre", href: "/services/download-centre" },
+    { name: "BIM", href: "/services/bim" },
   ];
 
   return (
@@ -23,7 +23,7 @@ export default function ServicesDropdown({ onClose }: ServicesDropdownProps) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.2 }}
-      className="absolute top-full left-0 pt-2 w-64 bg-transparent"
+      className="absolute top-full left-0 pt-2 w-60 bg-transparent"
     >
       <div className="bg-white rounded-lg shadow-lg border border-gray-200 py-2">
         {items.map((item, index) => (
@@ -46,4 +46,3 @@ export default function ServicesDropdown({ onClose }: ServicesDropdownProps) {
     </motion.div>
   );
 }
-

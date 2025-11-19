@@ -9,10 +9,10 @@ interface AboutDropdownProps {
 
 export default function AboutDropdown({ onClose }: AboutDropdownProps) {
   const items = [
-    { name: 'Sustainability', href: '/about' },
-    { name: 'Company', href: '/about' },
-    { name: 'Press Area', href: '/about' },
-    { name: 'Production', href: '/about' },
+    { name: 'Sustainability', href: '/about/sustainability' },
+    { name: 'Company', href: '/about/company' },
+    { name: 'Press Area', href: '/about/press-area' },
+    { name: 'Production', href: '/about/production' },
   ];
 
   return (
