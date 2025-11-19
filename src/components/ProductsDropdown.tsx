@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { products } from '@/data/products';
+import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { products } from "@/data/products";
 
 interface ProductsDropdownProps {
   onClose: () => void;
@@ -26,6 +26,7 @@ export default function ProductsDropdown({ onClose }: ProductsDropdownProps) {
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.05 }}
+              className="group"
             >
               <Link
                 href={item.href}
@@ -42,7 +43,7 @@ export default function ProductsDropdown({ onClose }: ProductsDropdownProps) {
                       sizes="48px"
                     />
                   </div>
-                  <span className="text-sm font-medium">{item.name}</span>
+                  <span className="text-sm font-medium group-hover:underline">{item.name}</span>
                 </div>
               </Link>
             </motion.div>
@@ -52,4 +53,3 @@ export default function ProductsDropdown({ onClose }: ProductsDropdownProps) {
     </motion.div>
   );
 }
-
